@@ -1,16 +1,20 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
-    <title>Meus Aplicativos</title>
+    <title>Agendamento de Horário</title>
 </head>
 <body>
-    <h1>Meus Aplicativos</h1>
-    <form method="POST" enctype="multipart/form-data">
-        <input type="file" name="apk_file">
-        <button type="submit">Enviar APK</button>
+    <h1>Agendamento de Horário na Barbearia</h1>
+    <form action="agendar.py" method="post">
+        <label for="nome">Nome do Cliente:</label>
+        <input type="text" id="nome" name="nome" required>
+        <br>
+        <label for="horario">Horário Desejado:</label>
+        <input type="time" id="horario" name="horario" required>
+        <br>
+        <input type="submit" value="Agendar">
     </form>
 </body>
 </html>
